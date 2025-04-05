@@ -7,14 +7,14 @@ import pickle
 import h5py 
 
 # Load the trained model
-model = tf.keras.models.load_model(r'E:\Desktop\sadia waheed GU1\Gen AI course 4 months\ANN-P2\env\model.h5') 
+model = tf.keras.models.load_model(r'model.h5') 
 
 # Load the encoder and scaler
-with open('E:\Desktop\sadia waheed GU1\Gen AI course 4 months\ANN-P2\env\label_gender.pkl', 'rb') as file:
+with open('label_gender.pkl', 'rb') as file:
     label_gender = pickle.load(file)
-with open('E:\Desktop\sadia waheed GU1\Gen AI course 4 months\ANN-P2\env\one_hot_encoder_geo.pkl', 'rb') as file:
+with open('one_hot_encoder_geo.pkl', 'rb') as file:
     one_hot_encoder_geo = pickle.load(file)
-with open('E:\Desktop\sadia waheed GU1\Gen AI course 4 months\ANN-P2\env\scaler.pkl', 'rb') as file:
+with open('scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
 # Streamlit app
